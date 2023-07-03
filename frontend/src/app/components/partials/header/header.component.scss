@@ -1,0 +1,70 @@
+header{
+    position: relative;
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid #e72929;
+
+    a{
+        color: #af1313;
+
+        &.logo{
+            font-weight: bold;
+            padding: 1rem;
+        }
+
+        &:hover{
+            background-color: #e72929;
+            color: white;
+            cursor: pointer;
+        }
+
+        span{
+            background-color: #ff4d4d;
+            color: white;
+            padding: 0.1rem 0.45rem;
+            border-radius: 100rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .container{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+
+        a{
+            padding: 1rem;
+            display: inline-block;
+        }
+
+        .menu-container{
+            position: relative;
+
+            .menu{
+                position: absolute;
+                z-index: 1;
+                background-color: whitesmoke;
+                display: none; 
+            }
+
+            &:hover{
+                .menu {
+                    display: block;
+                    
+                    a{
+                        width: 100%;
+                        min-width: 8rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
