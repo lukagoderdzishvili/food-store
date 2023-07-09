@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { USER_LOGIN_URL } from '../shared/constants/urls';
 import { ToastrService } from 'ngx-toastr';
 
-const USER_KEY: string = 'USer';
+const USER_KEY: string = 'User';
 @Injectable({
   providedIn: 'root'
 })
@@ -43,6 +43,7 @@ export class UserService {
   }
 
   private setUserToLocaclStorage(user: User): void{
+    console.log(user);
     localStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
