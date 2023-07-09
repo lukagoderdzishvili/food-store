@@ -11,6 +11,8 @@ export class TagsComponent {
   public tags?: Array<Tag>;
   
   constructor(foodService: FoodService){
-    this.tags = foodService.getAllTags();
+    foodService.getAllTags().subscribe((serverTag) => {
+      this.tags = serverTag;
+    })
   }
 }
